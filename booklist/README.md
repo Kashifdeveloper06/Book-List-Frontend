@@ -7,12 +7,6 @@ Prerequisites
 React Native App
   This is a React Native application built to run on multiple platforms, including iOS and Android. The project is initialized with the help of react-native CLI and utilizes popular libraries and tools for efficient development.
 
-Getting Started
-  To get started with the project, follow the steps below:
-
-Clone this repository to your local machine:
-  git clone https://github.com/JawadSadiq01/Book-list.git
-
 Navigate to the project's root directory:
 
 Install the project dependencies:
