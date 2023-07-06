@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { Avatar } from 'react-native-paper';
+import SubComments from './SubComments';
 import { CommentsStyles } from './styles';
-import SubCommnets from './SubCommnets';
 const Comments = () => {
   return (
-    <View style={{ flexDirection: 'row', paddingHorizontal: 15, paddingVertical: 10 }}>
+    <View style={CommentsStyles.container}>
 
       <View style={{ flex: 0.8 }} >
         <Avatar.Image size={40} source={require('../assets/Images/avatar1.png')} />
       </View>
 
       <View style={{ flex: 4.7, paddingTop: '2%' }} >
-        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Text style={{ fontSize: 14, fontWeight: '700', color: '#1D232B' }}>안녕 나 응애 </Text>
+        <View style={CommentsStyles.profileActions}>
+          <Text style={CommentsStyles.senderName}>안녕 나 응애 </Text>
           <Avatar.Image style={{ marginHorizontal: 10 }} size={15} source={require('../assets/Images/verified.png')} />
-          <Text style={{ fontSize: 10, fontWeight: '500', color: '#919EB6' }}>1일전 </Text>
+          <Text style={CommentsStyles.sendingTime}>1일전 </Text>
         </View>
         <View>
           <View style={CommentsStyles.commentContent}>
@@ -30,12 +30,12 @@ const Comments = () => {
               <Image source={require('../assets/Images/linkCount.png')} />
               <Image source={require('../assets/Images/commentCount.png')} />
             </View>
-            <SubCommnets image={require('../assets/Images/avatar2.png')} title={'ㅇㅅㅇ'} verified={false} message={'오 대박! 라이브 리뷰 오늘 올라온대요? 챙겨봐야겠다'} />
+            <SubComments image={require('../assets/Images/avatar2.png')} title={'ㅇㅅㅇ'} verified={false} message={'오 대박! 라이브 리뷰 오늘 올라온대요? 챙겨봐야겠다'} />
           </View>
         </View>
       </View>
 
-      <View style={{ flex: 0.5, alignItems: 'flex-end', paddingTop: '3%' }} >
+      <View style={CommentsStyles.optionButton} >
         <Image style={{ width: 15, }} source={require('../assets/Images/optionButton.png')} />
       </View>
     </View >
