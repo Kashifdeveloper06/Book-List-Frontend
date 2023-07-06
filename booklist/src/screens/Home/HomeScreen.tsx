@@ -35,6 +35,7 @@ const HomeScreen = () => {
 
       })
       .catch((error) => {
+        setLoading(false);
         console.error('Error:', error);
       });
   }, [])
@@ -69,7 +70,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       {
-        (loading || myBooks[0]) ?
+        (myBooks[0]) ?
           <FlatList
             data={myBooks}
             renderItem={renderCard}
@@ -81,7 +82,7 @@ const HomeScreen = () => {
             ListFooterComponent={renderFooter}
           />
           :
-          <Loader msg={'Network Error...'} />
+          <Loader msg={loading ? "Fetching Books..." : 'Network Error...'} />
       }
     </SafeAreaView>
   );
