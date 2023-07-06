@@ -4,7 +4,7 @@ import { Avatar } from 'react-native-paper';
 import { CommentsStyles } from './styles';
 import { ISubComment } from '../Interfaces/interfaces';
 
-const SubCommnets = (props: ISubComment) => {
+const SubComments = (props: ISubComment) => {
   const { image, title, verified, message } = props;
 
   return (
@@ -36,4 +36,4 @@ const SubCommnets = (props: ISubComment) => {
     </View >
   )
 };
-export default SubCommnets;
+export default SubComments;

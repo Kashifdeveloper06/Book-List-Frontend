@@ -9,16 +9,16 @@ const BookCard = (props: IBookCard) => {
   return (
     <Card onPress={navigateFunction} style={{ borderRadius: 0, width: '49.5%' }}>
       <Image
-        source={item.img}
+        source={{ uri: item?.coverImage }}
         style={BookCardStyles.imageStyle}
         resizeMode="stretch"
       />
 
       <Card.Content style={{ paddingTop: 5 }}>
-        <Text style={BookCardStyles.cardTitle}>{item.title}</Text>
+        <Text style={BookCardStyles.cardTitle}>{item?.title}</Text>
         <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
-          <Text style={BookCardStyles.cardDiscount}>{item.discount}</Text>
-          <Text style={BookCardStyles.cardPrice}>{item.price}</Text>
+          <Text style={BookCardStyles.cardDiscount}>{item?.discountRate}</Text>
+          <Text style={BookCardStyles.cardPrice}>{item?.price}</Text>
         </View>
       </Card.Content>
     </Card>

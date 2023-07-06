@@ -1,7 +1,4 @@
 import { StyleSheet, Platform } from 'react-native';
-const primaryBg = '#242424';
-const secondaryBg = '#494949';
-const primaryText = '#FFFFFF';
 
 const styles = StyleSheet.create({
   container: {

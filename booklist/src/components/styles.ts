@@ -1,9 +1,4 @@
 import { StyleSheet, Dimensions, Platform } from 'react-native';
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
-const primaryBg = '#242424';
-const secondaryBg = '#494949';
-const primaryText = '#FFFFFF';
 
 const BookCardStyles = StyleSheet.create({
   imageStyle: {
@@ -25,6 +20,9 @@ const BookCardStyles = StyleSheet.create({
 });
 
 const CommentsStyles = StyleSheet.create({
+  container: {
+    flexDirection: 'row', paddingHorizontal: 15, paddingVertical: 10
+  },
   header: {
     alignItems: 'center',
     display: 'flex',
@@ -32,13 +30,11 @@ const CommentsStyles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   profileActions: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'row', alignItems: 'center'
   },
+  senderName: { fontSize: 14, fontWeight: '700', color: '#1D232B' },
+  sendingTime: { fontSize: 10, fontWeight: '500', color: '#919EB6' },
   commentContent: {
-    // paddingLeft: '13%',
-    // paddingRight: '2%'
     paddingTop: '2%'
   },
   commentActions: {
@@ -46,7 +42,9 @@ const CommentsStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     paddingTop: 5,
-  }
+  },
+  optionButton: { flex: 0.5, alignItems: 'flex-end', paddingTop: '3%' }
+
 });
 
 export { BookCardStyles, CommentsStyles };

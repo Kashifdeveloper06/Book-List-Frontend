@@ -1,9 +1,9 @@
 type BookData = {
-  id: string;
+  _id: string;
   title: string;
-  discount: string,
-  price: string,
-  img: string,
+  discountRate: number,
+  price: number,
+  coverImage: string,
   description: string
 };
 
@@ -17,4 +17,7 @@ type ISubComment = {
   verified: boolean,
   message: string,
 }
-export { BookData, IBookCard, ISubComment }
+type ILoaderProps = {
+  msg: string
+}
+export { BookData, IBookCard, ISubComment, ILoaderProps }
